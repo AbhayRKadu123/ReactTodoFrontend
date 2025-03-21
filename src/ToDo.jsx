@@ -8,9 +8,17 @@ export default function ToDo(){
     let [Lst,SetLst]=useState([])
     const fetchMessage = async () => {
         try {
+<<<<<<< Updated upstream
           const result = await fetch("http://localhost:8080/gettodo");
           const data = await result.json();
          console.log(data) // Update state with the response
+=======
+          const response = await fetch("http://localhost:8080/gettodo");
+          const Data = await response.json();
+         console.log(Data) // Update state with the response\
+         console.log('this data has been saved') // Update state with the response
+
+>>>>>>> Stashed changes
         } catch (error) {
           console.error("Error fetching message:", error);
         }
